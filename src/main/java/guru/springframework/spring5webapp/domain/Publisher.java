@@ -9,7 +9,7 @@ public class Publisher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
     private String name;
     private String addressLine1;
@@ -41,11 +41,11 @@ public class Publisher {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -91,7 +91,7 @@ public class Publisher {
     @Override
     public String toString() {
         return "Publisher{" +
-                "Id=" + Id +
+                "Id=" + id +
                 ", name='" + name + '\'' +
                 ", addressLine1='" + addressLine1 + '\'' +
                 ", city='" + city + '\'' +
@@ -107,11 +107,11 @@ public class Publisher {
 
         Publisher publisher = (Publisher) o;
 
-        return Id != null ? Id.equals(publisher.Id) : publisher.Id == null;
+        return id != null ? id.equals(publisher.id) : publisher.id == null;
     }
 
     @Override
     public int hashCode() {
-        return Id != null ? Id.hashCode() : 0;
+        return id != null ? id.hashCode() : 0;
     }
 }
